@@ -148,6 +148,7 @@ function handleClick(prefix){
         <div>Total: <strong>$${totalPrice.toFixed(2)}</strong></div>
     </div>
     `
+    document.getElementById("submitOrder").disabled = false
 }
 
 function combineCake(numberPeople, mainFlavorPrice, mainFlavor, secondFlavor, extraPercentage, coverType, coverTypeString, decoType, decoTypeString){

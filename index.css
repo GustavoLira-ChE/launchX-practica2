@@ -155,6 +155,10 @@ nav ul li a{
 /* Order online section */
 #online-order{
     background-color: royalblue;
+    scroll-margin-top: 150px;
+}
+#online-order h3, #online-order p{
+    text-align: center;
 }
 #online-order form{
     display: flex;
