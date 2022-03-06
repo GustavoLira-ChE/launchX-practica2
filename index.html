@@ -4,29 +4,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>SpaceCake</title>
 </head>
 <body>
     <header>
         <div>
-            <img src="/public/assets/bakery.svg" alt="">
+            <img src="/public/assets/bakery.png" alt="logo">
         </div>
         <div>
             <nav>
-                <li>
-                    <ul></ul>
-                    <ul></ul>
-                    <ul></ul>
-                    <ul></ul>
-                </li>
+                <ul>
+                    <li><a href="#about">Acerca</a></li>
+                    <li><a href="#products">Nuestros productos</a></li>
+                    <li><a href="#online-order">Ordena Online</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
     <div id="main-content">
-
+        <section id="about">
+            <div id="welcome-div">
+                <h1>Pasteles con sabor casero, excelente horneado artesanal & postres especiales.</h1>
+                
+            </div>
+            <div>
+                <h2>
+                    Más que solo pasteles
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit, diam quis placerat luctus, risus ligula rhoncus libero, in posuere diam felis id dolor. Quisque porta rutrum sapien, sit amet fringilla mi gravida nec. In hac habitasse platea dictumst. Sed non nunc orci. Aenean convallis auctor turpis, vitae finibus sem aliquam lacinia. Suspendisse et ante fermentum, sagittis eros ullamcorper, lobortis odio. Nullam commodo augue non leo pulvinar, nec iaculis neque pharetra. In id ultricies ex. Etiam feugiat aliquam eleifend.</p>
+            </div>
+            <div>
+                <h2>Acerca de nuestra tienda</h2>
+                <p>Vivamus rhoncus mattis imperdiet. Morbi libero diam, condimentum sed nisl et, convallis aliquet leo. Vestibulum non libero quis felis ultricies ornare at quis nisl. Fusce nec aliquam sem. Suspendisse eget risus nec ex feugiat consectetur. Nulla consequat tellus metus, eu finibus nunc sollicitudin id. Phasellus ac metus nulla. Suspendisse ullamcorper tristique arcu et suscipit. Vivamus dapibus ex enim, sit amet vehicula urna cursus sed. Vestibulum lacinia in turpis eu luctus. Sed condimentum neque sit amet diam letius fermentum. Suspendisse gravida massa eget felis consequat consectetur. Sed interdum a sem nec laoreet. Cras ornare semper lectus, sed sollicitudin dui convallis non.</p>
+            </div>
+        </section>
+        <section id="products">
+            <h2>Nuestros Pasteles son perfectos para cada momento!</h2>
+            
+            <div id="numberPersonInput">
+                <label for="numberVainilla">Numero de personas de su evento:</label>
+                <input type="number" id="numberPeople" onchange="priceSetting()" required>
+            </div>
+            <div id="secondaru-flavor">
+                <label>Si así lo desea seleccione otro sabor para su pastel</label>
+                <select id="secondaryFlavourValue" name="secondaryflavor" onchange="priceSetting()">
+                    <option style="color: lightgray;" disabled selected value>Seleccione sabor</option>
+                    <option value="Vainilla">Vainilla</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Zanahoria">Zanahoria</option>
+                    <option value="3 leches">3 leches</option>
+                </select>
+            </div>
+            <div id="coverType">
+                <h4>Elija el tipo de cobertura:</h4>
+                <div class="block-package-container">
+                    <div class="block-package">
+                        <img src="/public/assets/ganache-choco-deco.png" alt="ganache-choco-deco">
+                        <label for="chocoGanage">Ganage de Chocolate</label>
+                        <input type="radio" id="chocoGanage" name="coverTypeinput" value="ganageChocolate" onchange="priceSetting()">
+                    </div>
+                    <div class="block-package">
+                        <img src="/public/assets/buttermilk-deco.png" alt="buttermilk-deco">
+                        <label for="butterCover">Covertura de mantequilla</label>
+                        <input type="radio" id="butterCover" name="coverTypeinput" value="buttermilkdeco" onchange="priceSetting()">
+                    </div>
+                    <div class="block-package">
+                        <img src="/public/assets/fondant-deco.png" alt="fondant-deco">
+                        <label for="fondant">Fondant</label>
+                        <input type="radio" id="fondant"  name="coverTypeinput" value="fondant" onchange="priceSetting()">
+                    </div>
+                    <div class="block-package">
+                        <img src="/public/assets/cream-cheese-deco.png" alt="cream-cheese-deco">
+                        <label for="creamCheese">Covertura de queso crema</label>
+                        <input type="radio" id="creamCheese" name="coverTypeinput" value="creamCheese" onchange="priceSetting()">
+                    </div>
+                </div>
+            </div>
+            <div id="decoType">
+                <h4>Elija el tipo de cobertura:</h4>
+                <div class="block-package-container">
+                    <div  class="block-package">
+                        <img src="/public/assets/sprinkles.png" alt="sprinkles">
+                        <label for="sprinkles">Sprinkles</label>
+                        <input type="radio" id="sprinkles" name="decoTypeinput" value="sprinkles" onchange="priceSetting()">
+                    </div>
+                    <div  class="block-package">
+                        <img src="/public/assets/chocolate-chips.png" alt="chocolate-chips">
+                        <label for="chocolateChips">Chispas de chocolate</label>
+                        <input type="radio" id="chocolateChips" name="decoTypeinput" value="chocolateChips" onchange="priceSetting()">
+                    </div>
+                    <div  class="block-package">
+                        <img src="/public/assets/cranberry.png" alt="cranberry">
+                        <label for="cranberry">Frutos rojos</label>
+                        <input type="radio" id="cranberry" name="decoTypeinput" value="cranberry" onchange="priceSetting()">
+                    </div>
+                    <div  class="block-package">
+                        <img src="/public/assets/fondant-flowers.png" alt="fondant-flowers">
+                        <label for="fondantFlowers">Flores de fondant</label>
+                        <input type="radio" id="fondantFlowers" name="decoTypeinput" value="fondantFlowers" onchange="priceSetting()">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Estos son los precios segun tus especificaciones:</h4>
+                <div class="block-package-container">
+                    <div class="block-package">
+                        <h4 id="vaititle">Pastel de Vainilla</h4>
+                        <img src="/public/assets/funfetti-cake.png" alt="Vainilla cake">
+                        <div id="pricevai">Seleccione number de personas</div>
+                        <div class="priceCake"></div>
+                        <Button onclick="handleClick('vai')">Seleccionar</Button>
+                    </div>
+                    <div class="block-package">
+                        <h4 id="chocotitle">Pastel de Chocolate</h4>
+                        <img src="/public/assets/chocolate-cake.png" alt="Chocolate cake">
+                        <div id="pricechoco">Seleccione number de personas</div>
+                        <div class="priceCake"></div>
+                        <Button onclick="handleClick('choco')">Seleccionar</Button>
+                    </div>
+                    <div class="block-package">
+                        <h4 id="cartitle">Pastel de zanahoria</h4>
+                        <img src="/public/assets/carrot-cake.png" alt="Carrot cake">
+                        <div id="pricecar">Seleccione number de personas</div>
+                        <div class="priceCake"></div>
+                        <Button onclick="handleClick('car')">Seleccionar</Button>
+                    </div>
+                    <div class="block-package">
+                        <h4 id="m3title">Pastel de 3 leches</h4>
+                        <img src="/public/assets/3milk-cake.png" alt="3 milks cake">
+                        <div id="pricem3">Seleccione number de personas</div>
+                        <div class="priceCake"></div>
+                        <Button onclick="handleClick('m3')">Seleccionar</Button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="online-order">
+            <form action="">
+                <section id="cakeData"></section>
+                <section id="userData">
+                    <div class="container">
+                        <label for="name">Nombre Completo</label><br>
+                        <input type="text" id="name" name="name" placeholder="Introduce tu nombre" required><br>
+                    </div>
+                    <div class="container">
+                        <label for="email">Correo electronico</label><br>
+                        <input type="email" id="email" name="email" placeholder="Introduce tu correo electronico" required><br>
+                    </div>
+                    <div id="phone-format-example" class="container">
+                        <label for="phone">Telefono</label><br>
+                        <input type="tel" id="phone" name="phone" maxlength="16" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Enter your telephone number Example: 22-555-333-22-22" required>
+                    </div>
+                    <div class="container">
+                        <label for="description">Describe lo más detallado posible el pastel que deseas:</label>
+                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    </div>
+                </section>
+                <input type="submit" value="Solicitar Pastel">
+            </form>
+        </section>
     </div>
     <footer>
-
+        <div>
+            <div id="contact">
+                <h3>Contactanos</h3>
+                <p>500-500-5000</p>
+                <img src="/public/assets/whatsapp.svg" alt="">
+            </div>
+            <div id="location">
+                <h3>Ubicación</h3>
+                <p>14232 Capital city St. Austin, TX 97528</p>
+            </div>
+            <div id="hours">
+                <h3>Horario</h3>
+                <p><ul>
+                    <li>Lunes a viernes de 8:30-6:00pm</li>
+                    <li>Sábados de 9:30-2:00pm</li>
+                </ul></p>
+            </div>
+            <div id="socialmedia">
+                <h3>Redes sociales</h3>
+                <a href=""><img src="/public/assets/instagram.svg" alt=""></a>
+                <a href=""><img src="/public/assets/facebook.svg" alt=""></a>
+                <a href=""><img src="/public/assets/twitter.svg" alt=""></a>
+            </div>
+            <div id="admin">
+                <a href="/loginAdmin/login.html">Entrar como administrador</a>
+            </div>
+        </div>
     </footer>
+    <script src="/index.js"></script>
 </body>
 </html>

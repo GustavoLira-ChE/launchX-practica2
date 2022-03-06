@@ -1,0 +1,196 @@
+
+:root{
+    /* Elements */
+    --bkg-color: #eff0f3;
+    --headline: #0d0d0d;
+    --paragraph: #2a2a2a;
+    --button: #ff8e3c;
+    --btn-text: #0d0d0d;
+    /* Illustration */
+    --stroke: #0d0d0d;
+    --main: #eff0f3;
+    --highlight: #ff8e3c;
+    --secondary: #fffffe;
+    --ternary: #d9376e;
+    /* Font-family */
+    font-family: 'Lobster', cursive;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html, body{
+    height: fit-content;
+    background-color: var(--bkg-color);
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+/* Header section style */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--bkg-color);
+    color: var(--headline);
+    border-bottom: var(--stroke) 2px solid;
+}
+header img{
+    width: 150px;
+    height: 150px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 8px;
+}
+/* About section style */
+#about{
+    scroll-margin-top: 150px;
+}
+#welcome-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/assets/strawberry-cake.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--headline);
+}
+#about div:nth-child(2){
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/assets/pastel-bck.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#about div:nth-child(3){
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/assets/white-cake-recipe.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#about div p{
+    max-width: 600px;
+    padding: 16px;
+}
+/* Our products style */
+#products{
+    scroll-margin-top: 150px;
+}
+#products h2{
+    text-align: center;
+}
+#products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#products div{
+    padding: 16px;
+    margin: 8px;
+    min-width: 250px;
+}
+#block-package-container{
+    display: flex;
+    flex-direction: column;
+}
+.block-package{
+    width: 200px;
+    height: fit-content;
+    padding: 16px;
+    box-shadow: 
+        inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 2px rgb(255,255,255),
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px;
+}
+.block-package .priceCake div:nth-child(2n){
+    text-align: center;
+}
+.block-package button{
+    border: 1px black solid;
+    color: var(--btn-text);
+    background-color: var(--button);
+    padding: 4px;
+    text-decoration: none;
+}
+.block-package img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.block-package button:hover{
+    background-color: orangered;
+}
+.block-package-container{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+/* Order online section */
+#online-order{
+    background-color: royalblue;
+}
+#online-order form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+#cakeData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#userData .container{
+    min-width: 400px;
+    margin: 16px;
+}
+#userData .container input{
+    width: 90%;
+}
+#userData .container:last-child {
+    display: flex;
+    flex-direction: column;
+}
+/* footer */
+footer{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+}
+footer > div{
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 32px;
+    margin: 16px;
+}
